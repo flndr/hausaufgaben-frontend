@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="Thomas Flander"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta name="robots" content="noindex,nofollow"/>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <title>Holy Grail Layout</title>
+    <style>
+
+
+        :root {
+            --color-body-bg : white;
+
+            --color-wrapper : red;
+        }
+
+        html,
+        body {
+            height : 100%;
+        }
+
+
+        .Layout_Wrapper {
+            max-width      : 1200px;
+            margin         : 0 auto;
+            height         : 100%;
+
+            display        : flex;
+            flex-direction : column;
+        }
+
+        .Layout_Center {
+            flex-grow        : 1;
+            align-self       : stretch;
+            width            : 100%;
+
+            display          : flex;
+            justify-content  : stretch;
+            align-items      : stretch;
+            height           : 100%;
+            background-color : orange;
+        }
+
+        .Layout_Center_Right,
+        .Layout_Center_Center,
+        .Layout_Center_Left {
+            align-self : stretch;
+            width      : 100%;
+            height     : 100%;
+        }
+
+
+        .HolyGrail {
+            display        : flex;
+            height         : 100%; /* 1, 3 */
+            flex-direction : column;
+        }
+
+        .HolyGrail-header,
+        .HolyGrail-footer {
+            flex : none; /* 2 */
+        }
+
+        .HolyGrail-body {
+            display        : flex;
+            flex           : 1 0 auto; /* 2 */
+            flex-direction : column;
+            padding        : var(--space);
+        }
+
+        .HolyGrail-content {
+            margin-top : var(--space);
+        }
+
+        .HolyGrail-nav {
+            order : -1;
+        }
+
+        .HolyGrail-nav,
+        .HolyGrail-ads {
+            padding       : 1em;
+            border-radius : 3px;
+            background    : rgba(147, 128, 108, 0.1);
+        }
+
+        @media (--break-lg) {
+            .HolyGrail-body {
+                flex-direction : row;
+            }
+
+            .HolyGrail-content {
+                flex    : 1;
+                padding : 0 var(--space-lg);
+                margin  : 0;
+            }
+
+            .HolyGrail-nav, .HolyGrail-ads {
+                flex : 0 0 12em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="Layout_Wrapper">
+
+    <div class="Layout_Top">
+        <div style="padding: 2rem; background-color: red; color: white;">
+            Dummy Content Top
+        </div>
+    </div>
+
+    <div class="Layout_Center">
+        <div class="Layout_Center_Left">
+            <div style="padding: 2rem; height: 100%; background-color: cornflowerblue; color: white;">
+                Layout_Center_Left
+            </div>
+        </div>
+        <div class="Layout_Center_Center">
+            <div style="padding: 2rem; height: 100%; background-color: powderblue; color: white;">
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center<br/>
+                Layout_Center_Center
+            </div>
+        </div>
+        <div class="Layout_Center_Right">
+            <div style="padding: 2rem; height: 100%; background-color: royalblue; color: white;">
+                Layout_Center_Left
+            </div>
+        </div>
+    </div>
+
+
+    <div class="Layout_Bottom">
+        <div style="padding: 2rem; background-color: red; color: white;">
+            Dummy Content Bottom
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

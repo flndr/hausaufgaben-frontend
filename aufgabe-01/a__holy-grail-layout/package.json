@@ -1,0 +1,18 @@
+{
+  "name": "aufgabe-01",
+  "version": "1.0.0",
+  "description": "Technische Themen \r - Holy Grail Layout (CSS)\r - Layouts und Kind-Komponenten Angular vs React\r - Modern Styling Solutions mit CSS-in-JS",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
