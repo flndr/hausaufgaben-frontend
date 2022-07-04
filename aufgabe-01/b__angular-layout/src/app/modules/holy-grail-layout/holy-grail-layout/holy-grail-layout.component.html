@@ -1,0 +1,24 @@
+<div class="Layout_Wrapper">
+
+    <div class="Layout_Top">
+        <ng-content select="[slot='top']"></ng-content>
+    </div>
+
+    <div class="Layout_Center">
+        <div class="Layout_Center_Left">
+            <ng-content select="[slot='center-left']"></ng-content>
+        </div>
+        <div class="Layout_Center_Center">
+            <ng-content select="[slot='center-center']"></ng-content>
+        </div>
+        <div class="Layout_Center_Right">
+            <ng-content select="[slot='center-right']"></ng-content>
+        </div>
+    </div>
+
+
+    <div class="Layout_Bottom">
+        <ng-content select="[slot='bottom']"></ng-content>
+    </div>
+
+</div>
