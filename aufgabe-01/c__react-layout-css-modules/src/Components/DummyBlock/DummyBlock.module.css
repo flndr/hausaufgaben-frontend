@@ -1,0 +1,8 @@
+.DummyBlock {
+    padding : 2rem;
+    color   : white;
+}
+
+.DummyBlockMaxHeight {
+    height: 100%;
+}

@@ -1,26 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { DummyBlock }      from 'Components/DummyBlock/DummyBlock';
+import { HolyGrailLayout } from 'Components/HolyGrailLayout/HolyGrailLayout';
+
+export const App = () => {
+    
+    const Top    = () => <DummyBlock bg={ 'red' }>Content-Top</DummyBlock>;
+    const Bottom = () => <DummyBlock bg={ 'red' }>Content-Bottom</DummyBlock>;
+    const Left   = () => <DummyBlock bg={ 'cornflowerblue' } maxHeight={ true }>Content-Left</DummyBlock>;
+    const Right  = () => <DummyBlock bg={ 'royalblue' } maxHeight={ true }>Content-Right</DummyBlock>;
+    const Center = () => <DummyBlock bg={ 'powderblue' } maxHeight={ true }>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center<br/>
+        Content-Center
+    </DummyBlock>
+    
+    return <HolyGrailLayout
+        top={ <Top/> }
+        centerLeft={ <Left/> }
+        centerCenter={ <Center/> }
+        centerRight={ <Right/> }
+        bottom={ <Bottom/> }
+    />;
 }
 
 export default App;
