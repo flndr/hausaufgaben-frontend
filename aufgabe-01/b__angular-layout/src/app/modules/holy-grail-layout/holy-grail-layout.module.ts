@@ -1,5 +1,6 @@
 import { NgModule }                 from '@angular/core';
 import { CommonModule }             from '@angular/common';
+import { AppRoutingModule }         from 'src/app/app-routing.module';
 import { DummyContentModule }       from 'src/app/modules/dummy-content/dummy-content.module';
 import { BaseLayoutComponent }      from 'src/app/modules/holy-grail-layout/base-layout/base-layout.component';
 import { HolyGrailLayoutComponent } from './holy-grail-layout/holy-grail-layout.component';
@@ -13,9 +14,10 @@ import { HolyGrailLayoutComponent } from './holy-grail-layout/holy-grail-layout.
         HolyGrailLayoutComponent,
         BaseLayoutComponent
     ],
-    imports      : [
+    imports : [
         CommonModule,
-        DummyContentModule
+        DummyContentModule,
+        AppRoutingModule
     ]
 } )
 export class HolyGrailLayoutModule {}
