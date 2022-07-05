@@ -1,0 +1,30 @@
+<app-holy-grail-layout>
+
+
+
+    <app-dummy-block slot="bottom" bg="red">
+        FOOTER
+    </app-dummy-block>
+
+    <app-dummy-block slot="top" bg="red">
+        HEADER
+    </app-dummy-block>
+
+
+    <app-dummy-block slot="center-left" bg="cornflowerblue" [maxHeight]="true">
+        <ul>
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/about">About</a></li>
+        </ul>
+    </app-dummy-block>
+
+    <app-dummy-block slot="center-center" bg="powderblue" [maxHeight]="true">
+        <ng-content></ng-content>
+    </app-dummy-block>
+
+    <app-dummy-block slot="center-right" bg="royalblue" [maxHeight]="true">
+        Center-Right
+    </app-dummy-block>
+
+
+</app-holy-grail-layout>
