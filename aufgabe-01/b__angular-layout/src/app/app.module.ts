@@ -1,21 +1,18 @@
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { NgModule }         from '@angular/core';
 import { BrowserModule }    from '@angular/platform-browser';
-import { RouterModule }     from '@angular/router';
-
-import { HolyGrailLayoutModule } from './modules/holy-grail-layout/holy-grail-layout.module';
-import { DummyContentModule }    from './modules/dummy-content/dummy-content.module';
-import { AppComponent }          from './app.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { PagesModule }      from 'src/app/pages/pages.module';
+import { AppComponent }     from './app.component';
 
 @NgModule( {
     declarations : [
-        AppComponent,
+        AppComponent
     ],
-    imports : [
+    imports      : [
         BrowserModule,
-        HolyGrailLayoutModule,
-        DummyContentModule,
-        RouterModule
+        AppRoutingModule,
+        PagesModule
     ],
     providers    : [],
     bootstrap    : [ AppComponent ],
